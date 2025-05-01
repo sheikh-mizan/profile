@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mizan's Hacker Profile</title>
+  <title>Mizan's Premium Profile</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -26,6 +26,9 @@
       flex-direction: column;
       align-items: center;
       padding: 20px;
+      height: 100vh;
+      justify-content: center;
+      text-align: center;
     }
 
     header {
@@ -40,39 +43,40 @@
       padding: 20px;
       color: var(--text-color);
       text-align: left;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
     }
 
-    /* Profile Image Styling (Fixed Circular) */
     .profile-image {
       width: var(--profile-img-size);
       height: var(--profile-img-size);
       border-radius: 50%;
       border: 3px solid var(--primary-glow);
-      margin-top: -50px;
-      box-shadow: 0 4px 12px var(--card-shadow);
-      object-fit: cover; /* Ensures the image doesn't get stretched */
+      margin-top: -60px;
+      box-shadow: 0 6px 18px var(--card-shadow);
+      object-fit: cover; /* Keeps the image circular without stretching */
     }
 
     header h1 {
-      font-size: 32px;
+      font-size: 36px;
       margin: 10px 0 5px 0;
-      text-shadow: 0 0 10px var(--primary-glow);
+      text-shadow: 0 0 15px var(--primary-glow);
+      font-weight: 600;
     }
 
     header p {
-      font-size: 16px;
+      font-size: 18px;
       margin: 0;
-      text-shadow: 0 0 8px var(--primary-glow);
+      text-shadow: 0 0 12px var(--primary-glow);
+      font-weight: 400;
     }
 
-    /* Gallery Section */
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 12px;
       width: 100%;
-      max-width: 1024px;
-      margin-top: 20px;
+      max-width: 1100px;
+      margin-top: 30px;
     }
 
     .gallery img {
@@ -80,27 +84,38 @@
       aspect-ratio: 1/1;
       object-fit: cover;
       border-radius: var(--border-radius);
-      box-shadow: 0 4px 18px var(--card-shadow);
+      box-shadow: 0 6px 30px var(--card-shadow);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .gallery img:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 20px var(--primary-glow);
+      transform: scale(1.05);
+      box-shadow: 0 0 30px var(--primary-glow);
     }
 
-    /* Mobile Styling */
+    .bio {
+      max-width: 1100px;
+      margin-top: 40px;
+      padding: 15px;
+      font-size: 18px;
+      text-align: center;
+      line-height: 1.6;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    }
+
     @media (max-width: 768px) {
       header {
         height: 200px;
       }
 
       header h1 {
-        font-size: 26px;
+        font-size: 30px;
       }
 
       header p {
-        font-size: 14px;
+        font-size: 16px;
       }
 
       .gallery {
@@ -117,19 +132,23 @@
     
     <!-- Name and Bio -->
     <h1>Mizanur Rahaman</h1>
-    <p>Tech Enthusiast | Digital Artist | Hacker at heart</p>
+    <p>Tech Enthusiast | Digital Artist | Hacker at Heart</p>
   </header>
+
+  <!-- Bio Section -->
+  <div class="bio">
+    <p>Welcome to my personal profile page. Here, you’ll find a collection of my works, experiences, and ideas. I’m passionate about technology, digital art, and all things creative. Enjoy the journey through my gallery and get to know more about me!</p>
+  </div>
 
   <!-- Gallery Section (Post Grid) -->
   <div class="gallery">
-    <img src="IMG_3943.jpg" alt="IMG_3943" />
-    <img src="IMG_3928.jpg" alt="IMG_3928" />
-    <img src="IMG_3876.jpg" alt="IMG_3876" />
-    <img src="IMG_3854.jpg" alt="IMG_3854" />
-    <img src="IMG_3838.jpg" alt="IMG_3838" />
-    <img src="IMG_2835.jpg" alt="IMG_2835" />
+    <img src="IMG_3943.jpg" alt="IMG_3943" loading="lazy"/>
+    <img src="IMG_3928.jpg" alt="IMG_3928" loading="lazy"/>
+    <img src="IMG_3876.jpg" alt="IMG_3876" loading="lazy"/>
+    <img src="IMG_3854.jpg" alt="IMG_3854" loading="lazy"/>
+    <img src="IMG_3838.jpg" alt="IMG_3838" loading="lazy"/>
+    <img src="IMG_2835.jpg" alt="IMG_2835" loading="lazy"/>
   </div>
 </body>
 </html>
-
 
