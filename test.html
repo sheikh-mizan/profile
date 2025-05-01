@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gallery</title>
+  <title>Mizan's Hacker Profile</title>
   <style>
     :root {
       --bg-color: #0d0d0d;
@@ -11,7 +11,7 @@
       --text-color: #e8ffe5;
       --card-shadow: rgba(0, 255, 136, 0.3);
       --border-radius: 16px;
-      --iphone-glow: rgba(255, 255, 255, 0.08);
+      --header-height: 250px;
     }
 
     body {
@@ -26,59 +26,87 @@
     }
 
     header {
-      font-size: 22px;
-      color: var(--primary-glow);
-      margin-bottom: 20px;
-      text-align: center;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      text-shadow: 0 0 5px var(--primary-glow);
-      border-bottom: 1px solid var(--primary-glow);
-      padding-bottom: 10px;
       width: 100%;
-      max-width: 1024px;
+      height: var(--header-height);
+      background: url('IMG_3943.jpg') no-repeat center center;
+      background-size: cover;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 20px;
+      color: var(--text-color);
+      text-align: left;
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin: 0;
+      text-shadow: 0 0 10px var(--primary-glow);
+    }
+
+    header p {
+      font-size: 18px;
+      margin-top: 5px;
+      text-shadow: 0 0 8px var(--primary-glow);
     }
 
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-      gap: 10px;
+      gap: 12px;
       width: 100%;
       max-width: 1024px;
+      margin-top: 20px;
     }
 
     .gallery img {
       width: 100%;
-      aspect-ratio: 1 / 1;
+      aspect-ratio: 1/1;
       object-fit: cover;
       border-radius: var(--border-radius);
-      box-shadow: 0 0 8px var(--card-shadow), 0 0 2px var(--iphone-glow);
-      transition: transform 0.2s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 18px var(--card-shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .gallery img:hover {
       transform: scale(1.03);
-      box-shadow: 0 0 15px var(--primary-glow);
+      box-shadow: 0 0 20px var(--primary-glow);
     }
 
+    /* Mobile styling */
     @media (max-width: 768px) {
       header {
-        font-size: 18px;
+        height: 200px;
+      }
+      
+      header h1 {
+        font-size: 26px;
+      }
+
+      header p {
+        font-size: 16px;
       }
     }
+
   </style>
 </head>
 <body>
-  <header>Sheikh Mizan's Grid</header>
+  <!-- Profile Header Section -->
+  <header>
+    <h1>Mizanur Rahaman</h1>
+    <p>Tech enthusiast | Digital artist | Hacker at heart</p>
+  </header>
+
+  <!-- Gallery Section -->
   <div class="gallery">
-    <img src="IMG_2835.jpg" alt="Photo 2">
-    <img src="IMG_3838.jpg" alt="Photo 3">
-    <img src="IMG_3854.jpg" alt="Photo 4">
-    <img src="IMG_3876.jpg" alt="Photo 2">
-    <img src="IMG_3928.jpg" alt="Photo 3">
-    <img src="IMG_3943.jpg" alt="Photo 4">
+    <img src="IMG_3943.jpg" alt="IMG_3943" />
+    <img src="IMG_3928.jpg" alt="IMG_3928" />
+    <img src="IMG_3876.jpg" alt="IMG_3876" />
+    <img src="IMG_3854.jpg" alt="IMG_3854" />
+    <img src="IMG_3838.jpg" alt="IMG_3838" />
+    <img src="IMG_2835.jpg" alt="IMG_2835" />
   </div>
 </body>
 </html>
-
 
