@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wall Mount Photo Gallery</title>
+    <title>Instagram-like Photo Gallery</title>
     <style>
         * {
             margin: 0;
@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+            background-color: #f0f0f0;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -33,10 +33,10 @@
 
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Flexible grid */
-            gap: 20px;
+            grid-template-columns: repeat(3, 1fr); /* 3 photos per row */
+            gap: 10px;
             width: 100%;
-            max-width: 1200px;
+            max-width: 1000px;
             padding: 20px;
             margin-top: 20px;
         }
@@ -45,7 +45,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 10px;
+            border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease-in-out;
         }
@@ -61,8 +61,16 @@
             }
 
             .gallery {
-                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust for smaller screens */
+                grid-template-columns: repeat(2, 1fr); /* 2 photos per row on mobile */
                 gap: 15px;
+            }
+        }
+
+        /* For very small screens */
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: 1fr; /* 1 photo per row */
+                gap: 10px;
             }
         }
 
@@ -70,18 +78,21 @@
 </head>
 <body>
     <header>
-        Wall Mount Photo Gallery
+        Instagram-like Photo Gallery
     </header>
     <div class="gallery">
         <!-- Using reliable placeholders for testing -->
         <img src="https://placekitten.com/400/300" alt="photo1">
-        <img src="https://placekitten.com/500/400" alt="photo2">
-        <img src="https://placekitten.com/600/500" alt="photo3">
-        <img src="https://placekitten.com/700/600" alt="photo4">
-        <img src="https://placekitten.com/400/500" alt="photo5">
-        <img src="https://picsum.photos/400/300" alt="photo6">
-        <img src="https://picsum.photos/500/400" alt="photo7">
+        <img src="https://placekitten.com/400/300" alt="photo2">
+        <img src="https://placekitten.com/400/300" alt="photo3">
+        <img src="https://placekitten.com/400/300" alt="photo4">
+        <img src="https://placekitten.com/400/300" alt="photo5">
+        <img src="https://placekitten.com/400/300" alt="photo6">
+        <img src="https://placekitten.com/400/300" alt="photo7">
+        <img src="https://placekitten.com/400/300" alt="photo8">
+        <img src="https://placekitten.com/400/300" alt="photo9">
     </div>
 </body>
 </html>
+
 
