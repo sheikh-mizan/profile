@@ -12,23 +12,28 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f7f7f7;
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Courier New', Courier, monospace;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
             overflow-x: hidden;
+            height: 100vh;
         }
 
         header {
             width: 100%;
             padding: 20px;
-            background-color: #333;
-            color: #fff;
+            background-color: #1a1a1a;
+            color: #00FF41; /* Hacker green */
             text-align: center;
-            font-size: 24px;
-            letter-spacing: 2px;
+            font-size: 28px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #333;
+            box-shadow: 0 0 10px rgba(0, 255, 65, 0.5); /* Green glow effect */
         }
 
         .gallery {
@@ -37,8 +42,10 @@
             gap: 15px;
             width: 100%;
             max-width: 1000px;
-            padding: 15px;
-            margin-top: 20px;
+            padding: 20px;
+            margin-top: 40px;
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            border-radius: 10px;
         }
 
         .gallery img {
@@ -46,12 +53,13 @@
             height: 100%;
             object-fit: cover;
             border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 4px 20px rgba(0, 255, 65, 0.8); /* Glowing border effect */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
         }
 
         .gallery img:hover {
             transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(0, 255, 65, 1); /* Intense glow on hover */
         }
 
         /* Optimized for smaller tablets and larger phones */
@@ -64,12 +72,13 @@
         /* Mobile-first optimization: 1 photo per row on small screens */
         @media (max-width: 768px) {
             header {
-                font-size: 20px;
+                font-size: 22px;
             }
 
             .gallery {
                 grid-template-columns: 1fr; /* 1 per row for smaller screens */
-                gap: 12px;
+                gap: 10px;
+                padding: 15px; /* Reduced padding */
             }
         }
 
@@ -84,12 +93,11 @@
                 gap: 8px; /* Reduced gap */
             }
         }
-
     </style>
 </head>
 <body>
     <header>
-        Instagram-like Photo Gallery
+        iPhone X Hacker Photo Gallery
     </header>
     <div class="gallery">
         <!-- Referencing local images from 'photos' folder -->
@@ -101,5 +109,4 @@
     </div>
 </body>
 </html>
-
 
