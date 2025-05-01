@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mizan's Premium Profile</title>
+  <title>Mizan's Gallery</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -37,27 +37,27 @@
       position: relative;
       border-radius: var(--border-radius);
       overflow: hidden;
+      height: 180px; /* Slim like Facebook */
     }
 
     .cover-photo {
       width: 100%;
-      height: auto;
-      max-height: 300px;
+      height: 100%;
       object-fit: cover;
       display: block;
     }
 
     .profile-container {
       position: absolute;
-      bottom: -60px;
+      bottom: -50px;
       left: 16px;
       display: flex;
       align-items: center;
     }
 
     .profile-image {
-      width: 120px;
-      height: 120px;
+      width: 110px;
+      height: 110px;
       border-radius: 50%;
       border: 4px solid var(--primary-glow);
       object-fit: cover;
@@ -71,17 +71,17 @@
     }
 
     .profile-text h1 {
-      font-size: 28px;
+      font-size: 26px;
       text-shadow: 0 0 8px var(--primary-glow);
     }
 
     .profile-text p {
-      font-size: 16px;
+      font-size: 14px;
       text-shadow: 0 0 6px var(--primary-glow);
     }
 
     .spacer {
-      height: 80px;
+      height: 70px;
     }
 
     .bio {
@@ -125,47 +125,47 @@
       }
 
       .profile-text h1 {
-        font-size: 22px;
+        font-size: 20px;
       }
 
       .profile-text p {
-        font-size: 14px;
+        font-size: 13px;
       }
 
       .profile-container {
-        bottom: -50px;
+        bottom: -45px;
         left: 12px;
       }
 
       .spacer {
-        height: 70px;
+        height: 60px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header with Cover Photo and Profile Info -->
+  <!-- Header with Cover and Profile -->
   <header>
     <img src="IMG_3943.jpg" alt="Cover Photo" class="cover-photo">
     <div class="profile-container">
       <img src="IMG_3928.jpg" alt="Profile" class="profile-image">
       <div class="profile-text">
         <h1>Sheikh Mohammad Mizan</h1>
-        <p>Dreamer • Coder • Hacker Vibes</p>
+        <p>Dreamer • Creator • Hacker Mindset</p>
       </div>
     </div>
   </header>
 
-  <!-- Spacer for profile image -->
+  <!-- Spacer -->
   <div class="spacer"></div>
 
-  <!-- Bio Section -->
+  <!-- Bio -->
   <div class="bio">
-    <p>Hey there! I’m Mizan — passionate about digital aesthetics, hacking vibes, and curating moments through visuals. Scroll through to explore my world. 💻🖤</p>
+    <p>Hey! I'm Mizan. This is my personal gallery – a fusion of art, digital vibes, and my journey. Optimized for Android, inspired by hacker spirit & clean iOS elegance. ⚡</p>
   </div>
 
-  <!-- Gallery Grid -->
+  <!-- Gallery -->
   <div class="gallery">
     <img src="IMG_3943.jpg" alt="Image 1" loading="lazy" />
     <img src="IMG_3928.jpg" alt="Image 2" loading="lazy" />
