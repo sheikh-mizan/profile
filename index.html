@@ -3,43 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Directory</title>
+  <title>Professional Contact Directory</title>
   <style>
     * {
       box-sizing: border-box;
     }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: #f2f2f7;
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f6f9;
       margin: 0;
       padding: 20px;
-      color: #1c1c1e;
+      color: #333;
     }
     .container {
-      max-width: 600px;
+      max-width: 700px;
       margin: auto;
       background: #fff;
-      border-radius: 20px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+    }
+    .location-header {
+      font-size: 24px;
+      font-weight: 600;
+      color: #007aff;
+      text-align: center;
+      margin-bottom: 15px;
     }
     .search-box {
       width: 100%;
       margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
     }
     .search-box input {
       width: 100%;
       padding: 12px;
       font-size: 16px;
       border: 1px solid #ccc;
-      border-radius: 12px;
+      border-radius: 8px;
     }
     .contact {
       display: flex;
       align-items: center;
-      margin-bottom: 20px;
-      padding-bottom: 15px;
+      padding: 15px;
       border-bottom: 1px solid #eee;
+      margin-bottom: 15px;
     }
     .avatar {
       width: 60px;
@@ -50,7 +59,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 28px;
+      font-size: 30px;
       margin-right: 15px;
     }
     .contact-info {
@@ -64,23 +73,23 @@
     .phone-line {
       display: flex;
       align-items: center;
-      margin-top: 5px;
+      margin-top: 8px;
     }
     .phone {
       color: #007aff;
       margin-right: 10px;
     }
     .copy-btn {
-      padding: 4px 10px;
-      font-size: 13px;
+      padding: 5px 12px;
+      font-size: 14px;
       background-color: #007aff;
       color: white;
       border: none;
-      border-radius: 8px;
+      border-radius: 6px;
       cursor: pointer;
     }
     .location {
-      color: #888;
+      color: #777;
       font-size: 14px;
       margin-top: 5px;
     }
@@ -88,7 +97,14 @@
       text-align: center;
       font-size: 14px;
       color: #999;
-      margin-top: 40px;
+      margin-top: 30px;
+    }
+    footer a {
+      color: #007aff;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
     }
     @media (max-width: 500px) {
       .contact {
@@ -106,16 +122,21 @@
 <body>
 
   <div class="container">
+    
+    <!-- Location Header -->
+    <div class="location-header">Jamalpur</div>
 
+    <!-- Search Box -->
     <div class="search-box">
-      <input type="text" id="searchInput" placeholder="Search by label or location..." onkeyup="searchContacts()" />
+      <input type="text" id="searchInput" placeholder="Search contacts..." onkeyup="searchContacts()" />
     </div>
 
+    <!-- Contact List -->
     <div id="contactList">
       <div class="contact">
         <div class="avatar">👤</div>
         <div class="contact-info">
-          <h3 class="name">Customer Care 1</h3>
+          <h3>Customer Care</h3>
           <div class="phone-line">
             <span class="phone" id="phone1">+880 1700 123456</span>
             <button class="copy-btn" onclick="copyPhoneNumber('phone1')">Copy</button>
@@ -127,22 +148,44 @@
       <div class="contact">
         <div class="avatar">👤</div>
         <div class="contact-info">
-          <h3 class="name">Service Desk Kaliganj</h3>
+          <h3>Customer Support</h3>
           <div class="phone-line">
-            <span class="phone" id="phone2">+880 1800 654321</span>
+            <span class="phone" id="phone2">+880 1700 654321</span>
             <button class="copy-btn" onclick="copyPhoneNumber('phone2')">Copy</button>
+          </div>
+          <div class="location">Jamalpur</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Kaliganj Location Header -->
+    <div class="location-header">Kaliganj</div>
+    
+    <div id="contactList">
+      <div class="contact">
+        <div class="avatar">👤</div>
+        <div class="contact-info">
+          <h3>Tech Support</h3>
+          <div class="phone-line">
+            <span class="phone" id="phone3">+880 1800 112233</span>
+            <button class="copy-btn" onclick="copyPhoneNumber('phone3')">Copy</button>
           </div>
           <div class="location">Kaliganj</div>
         </div>
       </div>
+    </div>
 
+    <!-- Gazipur Location Header -->
+    <div class="location-header">Gazipur</div>
+    
+    <div id="contactList">
       <div class="contact">
         <div class="avatar">👤</div>
         <div class="contact-info">
-          <h3 class="name">Support Gazipur</h3>
+          <h3>Support Desk</h3>
           <div class="phone-line">
-            <span class="phone" id="phone3">+880 1900 112233</span>
-            <button class="copy-btn" onclick="copyPhoneNumber('phone3')">Copy</button>
+            <span class="phone" id="phone4">+880 1900 445566</span>
+            <button class="copy-btn" onclick="copyPhoneNumber('phone4')">Copy</button>
           </div>
           <div class="location">Gazipur</div>
         </div>
@@ -167,9 +210,8 @@
       const contacts = document.querySelectorAll('#contactList .contact');
 
       contacts.forEach(contact => {
-        const name = contact.querySelector('.name').textContent.toLowerCase();
-        const location = contact.querySelector('.location').textContent.toLowerCase();
-        if (name.includes(input) || location.includes(input)) {
+        const name = contact.querySelector('h3').textContent.toLowerCase();
+        if (name.includes(input)) {
           contact.style.display = 'flex';
         } else {
           contact.style.display = 'none';
@@ -180,4 +222,3 @@
 
 </body>
 </html>
-
