@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact List</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f2f2f7;
+      margin: 0;
+      padding: 20px;
+      color: #1c1c1e;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    header h1 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+    .search-box {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .search-box input {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+    }
+    .contact {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #eee;
+    }
+    .avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #e0e0e0;
+      color: #555;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      margin-right: 15px;
+    }
+    .contact-info {
+      flex: 1;
+    }
+    .contact-info h3 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .phone-line {
+      display: flex;
+      align-items: center;
+      margin-top: 5px;
+    }
+    .phone {
+      color: #007aff;
+      margin-right: 10px;
+    }
+    .copy-btn {
+      padding: 4px 10px;
+      font-size: 13px;
+      background-color: #007aff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .location {
+      color: #888;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #999;
+      margin-top: 40px;
+    }
+    @media (max-width: 500px) {
+      .contact {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .phone-line {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>My Contacts</h1>
+    </header>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search by name..." onkeyup="searchContacts()" />
+    </div>
+
+    <div id="contactList">
+      <div class="contact">
+        <div class="avatar">👤</div>
+        <div class="contact-info">
+          <h3 class="name">John Doe</h3>
+          <div class="phone-line">
+            <span class="phone" id="phone1">+1 (123) 456-7890</span>
+            <button class="copy-btn" onclick="copyPhoneNumber('phone1')">Copy</button>
+          </div>
+          <div class="location">New York, USA</div>
+        </div>
+      </div>
+
+      <div class="contact">
+        <div class="avatar">👤</div>
+        <div class="contact-info">
+          <h3 class="name">Jane Smith</h3>
+          <div class="phone-line">
+            <span class="phone" id="phone2">+1 (987) 654-3210</span>
+            <button class="copy-btn" onclick="copyPhoneNumber('phone2')">Copy</button>
+          </div>
+          <div class="location">Los Angeles, USA</div>
+        </div>
+      </div>
+
+      <div class="contact">
+        <div class="avatar">👤</div>
+        <div class="contact-info">
+          <h3 class="name">Michael Johnson</h3>
+          <div class="phone-line">
+            <span class="phone" id="phone3">+44 7911 123456</span>
+            <button class="copy-btn" onclick="copyPhoneNumber('phone3')">Copy</button>
+          </div>
+          <div class="location">London, UK</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 <strong>Mizanur Rahaman</strong> — All rights reserved.
+  </footer>
+
+  <script>
+    function copyPhoneNumber(id) {
+      const number = document.getElementById(id).textContent.trim();
+      navigator.clipboard.writeText(number)
+        .then(() => alert("Copied: " + number))
+        .catch(err => alert("Failed to copy: " + err));
+    }
+
+    function searchContacts() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const contacts = document.querySelectorAll('#contactList .contact');
+
+      contacts.forEach(contact => {
+        const name = contact.querySelector('.name').textContent.toLowerCase();
+        if (name.includes(input)) {
+          contact.style.display = 'flex';
+        } else {
+          contact.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
