@@ -7,11 +7,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0a0a0a;
+      --bg-color: #0a0a0a;
       --primary: #00ff88;
-      --text: #f0f0f0;
+      --text: #ffffff;
       --radius: 16px;
-      --shadow: 0 0 12px rgba(0, 255, 136, 0.15);
+      --shadow: 0 0 12px rgba(0, 255, 136, 0.2);
     }
 
     * {
@@ -21,7 +21,7 @@
     }
 
     body {
-      background: var(--bg);
+      background-color: var(--bg-color);
       color: var(--text);
       font-family: 'Montserrat', sans-serif;
       padding: 0;
@@ -42,6 +42,7 @@
 
     .profile {
       position: relative;
+      width: 100%;
       max-width: 1000px;
       margin: auto;
       padding: 0 16px;
@@ -51,43 +52,44 @@
     }
 
     .profile-img {
-      width: 100px;
-      height: 100px;
+      width: 110px;
+      height: 110px;
       border-radius: 50%;
-      border: 3px solid var(--primary);
+      border: 4px solid var(--primary);
       object-fit: cover;
-      background: #000;
       box-shadow: var(--shadow);
+      background: #000;
     }
 
     .profile-info {
-      margin-left: 14px;
+      margin-left: 16px;
     }
 
     .profile-info h1 {
-      font-size: 22px;
+      font-size: 24px;
       color: var(--primary);
     }
 
     .profile-info p {
-      font-size: 13px;
-      color: #aaa;
+      font-size: 14px;
+      color: #bbb;
+      margin-top: 4px;
     }
 
     .bio {
       max-width: 1000px;
-      margin: 18px auto;
+      margin: 20px auto;
       padding: 16px;
       text-align: center;
-      font-size: 15px;
+      font-size: 16px;
       color: #ccc;
     }
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-      gap: 8px;
-      padding: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+      padding: 10px;
       max-width: 1000px;
       margin: auto;
     }
@@ -98,28 +100,29 @@
       object-fit: cover;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      transition: 0.2s ease;
+      transition: 0.3s ease;
     }
 
     .gallery img:hover {
-      transform: scale(1.02);
+      transform: scale(1.03);
     }
 
     @media (max-width: 500px) {
       .profile {
         flex-direction: column;
         align-items: center;
-        text-align: center;
         margin-top: -70px;
+        text-align: center;
       }
 
       .profile-img {
-        width: 85px;
-        height: 85px;
+        width: 90px;
+        height: 90px;
       }
 
       .profile-info {
-        margin: 10px 0 0 0;
+        margin-left: 0;
+        margin-top: 8px;
       }
 
       .profile-info h1 {
@@ -127,12 +130,12 @@
       }
 
       .profile-info p {
-        font-size: 12px;
+        font-size: 13px;
       }
 
       .bio {
         font-size: 14px;
-        padding: 10px;
+        padding: 12px;
       }
     }
   </style>
@@ -141,31 +144,31 @@
 
   <!-- Cover -->
   <div class="header">
-    <img src="IMG_3943.webp" class="cover" alt="Cover" loading="lazy">
+    <img src="IMG_3943.jpg" class="cover" alt="Cover Photo">
   </div>
 
   <!-- Profile -->
   <div class="profile">
-    <img src="IMG_3928.webp" class="profile-img" alt="Profile" loading="lazy">
+    <img src="IMG_3928.jpg" class="profile-img" alt="Profile Picture">
     <div class="profile-info">
       <h1>Sheikh Mohammad Mizan</h1>
-      <p>Personal Hacker Vibe | Premium Vision</p>
+      <p>Dreamer • Creator • Hacker Vibes</p>
     </div>
   </div>
 
   <!-- Bio -->
   <div class="bio">
-    Welcome to my visual world. Inspired by simplicity, precision, and a touch of chaos. Optimized for mobile with lightning-fast image loading.
+    Personal photo collection. A gallery that reflects vibes from hacker minimalism and premium iOS-style flow. Built by Mizan.
   </div>
 
   <!-- Gallery -->
   <div class="gallery">
-    <img src="IMG_3943.webp" alt="1" loading="lazy">
-    <img src="IMG_3928.webp" alt="2" loading="lazy">
-    <img src="IMG_3876.webp" alt="3" loading="lazy">
-    <img src="IMG_3854.webp" alt="4" loading="lazy">
-    <img src="IMG_3838.webp" alt="5" loading="lazy">
-    <img src="IMG_2835.webp" alt="6" loading="lazy">
+    <img src="IMG_3943.jpg" alt="1">
+    <img src="IMG_3928.jpg" alt="2">
+    <img src="IMG_3876.jpg" alt="3">
+    <img src="IMG_3854.jpg" alt="4">
+    <img src="IMG_3838.jpg" alt="5">
+    <img src="IMG_2835.jpg" alt="6">
   </div>
 
 </body>
