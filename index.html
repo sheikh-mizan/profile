@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact List</title>
+  <title>Contact Directory</title>
   <style>
     * {
       box-sizing: border-box;
@@ -22,14 +22,6 @@
       border-radius: 20px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.05);
       padding: 20px;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    header h1 {
-      font-size: 26px;
-      margin-bottom: 10px;
     }
     .search-box {
       width: 100%;
@@ -114,48 +106,45 @@
 <body>
 
   <div class="container">
-    <header>
-      <h1>My Contacts</h1>
-    </header>
 
     <div class="search-box">
-      <input type="text" id="searchInput" placeholder="Search by name..." onkeyup="searchContacts()" />
+      <input type="text" id="searchInput" placeholder="Search by label or location..." onkeyup="searchContacts()" />
     </div>
 
     <div id="contactList">
       <div class="contact">
         <div class="avatar">👤</div>
         <div class="contact-info">
-          <h3 class="name">John Doe</h3>
+          <h3 class="name">Customer Care 1</h3>
           <div class="phone-line">
-            <span class="phone" id="phone1">+1 (123) 456-7890</span>
+            <span class="phone" id="phone1">+880 1700 123456</span>
             <button class="copy-btn" onclick="copyPhoneNumber('phone1')">Copy</button>
           </div>
-          <div class="location">New York, USA</div>
+          <div class="location">Jamalpur</div>
         </div>
       </div>
 
       <div class="contact">
         <div class="avatar">👤</div>
         <div class="contact-info">
-          <h3 class="name">Jane Smith</h3>
+          <h3 class="name">Service Desk Kaliganj</h3>
           <div class="phone-line">
-            <span class="phone" id="phone2">+1 (987) 654-3210</span>
+            <span class="phone" id="phone2">+880 1800 654321</span>
             <button class="copy-btn" onclick="copyPhoneNumber('phone2')">Copy</button>
           </div>
-          <div class="location">Los Angeles, USA</div>
+          <div class="location">Kaliganj</div>
         </div>
       </div>
 
       <div class="contact">
         <div class="avatar">👤</div>
         <div class="contact-info">
-          <h3 class="name">Michael Johnson</h3>
+          <h3 class="name">Support Gazipur</h3>
           <div class="phone-line">
-            <span class="phone" id="phone3">+44 7911 123456</span>
+            <span class="phone" id="phone3">+880 1900 112233</span>
             <button class="copy-btn" onclick="copyPhoneNumber('phone3')">Copy</button>
           </div>
-          <div class="location">London, UK</div>
+          <div class="location">Gazipur</div>
         </div>
       </div>
     </div>
@@ -179,7 +168,8 @@
 
       contacts.forEach(contact => {
         const name = contact.querySelector('.name').textContent.toLowerCase();
-        if (name.includes(input)) {
+        const location = contact.querySelector('.location').textContent.toLowerCase();
+        if (name.includes(input) || location.includes(input)) {
           contact.style.display = 'flex';
         } else {
           contact.style.display = 'none';
@@ -190,3 +180,4 @@
 
 </body>
 </html>
+
