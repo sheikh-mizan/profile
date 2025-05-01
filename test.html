@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wall Mount Photo Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+        }
+
+        header {
+            width: 100%;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            font-size: 24px;
+            letter-spacing: 2px;
+        }
+
+        .gallery {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            min-height: 600px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            position: absolute;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        Wall Mount Photo Gallery
+    </header>
+    <div class="gallery">
+        <!-- Random images from the internet for testing -->
+        <img src="https://images.unsplash.com/photo-1574158622645-6b6f84fae982" alt="photo1" class="photo">
+        <img src="https://images.unsplash.com/photo-1520747780174-5533b9c53a8b" alt="photo2" class="photo">
+        <img src="https://images.unsplash.com/photo-1574975150809-bfb55989a3b1" alt="photo3" class="photo">
+        <img src="https://images.unsplash.com/photo-1573674291283-8b6a33a78adf" alt="photo4" class="photo">
+        <img src="https://images.unsplash.com/photo-1516032847609-99038ff6d0fa" alt="photo5" class="photo">
+        <img src="https://images.unsplash.com/photo-1561451247-45aab5c998d9" alt="photo6" class="photo">
+        <img src="https://images.unsplash.com/photo-1561462730-9067b98231eb" alt="photo7" class="photo">
+    </div>
+
+    <script>
+        window.onload = function() {
+            const images = document.querySelectorAll('.gallery img');
+
+            images.forEach(image => {
+                // Set random position (top, left) and random size (width, height)
+                const randomTop = Math.floor(Math.random() * 500) + 50; // Random vertical position
+                const randomLeft = Math.floor(Math.random() * 800) + 50; // Random horizontal position
+                const randomWidth = Math.floor(Math.random() * (400 - 200 + 1)) + 200; // Random width
+                const randomHeight = Math.floor(Math.random() * (400 - 200 + 1)) + 200; // Random height
+
+                image.style.top = randomTop + 'px';
+                image.style.left = randomLeft + 'px';
+                image.style.width = randomWidth + 'px';
+                image.style.height = randomHeight + 'px';
+            });
+        };
+    </script>
+</body>
+</html>
