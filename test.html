@@ -42,7 +42,7 @@
       text-align: left;
     }
 
-    /* Profile Image Styling */
+    /* Profile Image Styling (Fixed Circular) */
     .profile-image {
       width: var(--profile-img-size);
       height: var(--profile-img-size);
@@ -50,6 +50,7 @@
       border: 3px solid var(--primary-glow);
       margin-top: -50px;
       box-shadow: 0 4px 12px var(--card-shadow);
+      object-fit: cover; /* Ensures the image doesn't get stretched */
     }
 
     header h1 {
@@ -130,4 +131,5 @@
   </div>
 </body>
 </html>
+
 
