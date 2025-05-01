@@ -37,7 +37,7 @@
       position: relative;
       border-radius: var(--border-radius);
       overflow: hidden;
-      height: 180px; /* Slim like Facebook */
+      height: 180px; /* Slim Facebook-style */
     }
 
     .cover-photo {
@@ -49,10 +49,11 @@
 
     .profile-container {
       position: absolute;
-      bottom: -50px;
+      bottom: -65px;
       left: 16px;
       display: flex;
       align-items: center;
+      z-index: 2;
     }
 
     .profile-image {
@@ -81,7 +82,7 @@
     }
 
     .spacer {
-      height: 70px;
+      height: 90px; /* Ensures profile image doesn't overlap next section */
     }
 
     .bio {
@@ -133,12 +134,12 @@
       }
 
       .profile-container {
-        bottom: -45px;
+        bottom: -50px;
         left: 12px;
       }
 
       .spacer {
-        height: 60px;
+        height: 80px;
       }
     }
   </style>
