@@ -1,181 +1,304 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mizan's Gallery</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gamelyra | Trusted Clash of Clans Account Marketplace</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Gamelyra is your trusted platform for buying and selling Clash of Clans accounts securely via Telegram middleman service and upcoming full marketplace launch." />
+  <meta name="keywords" content="buy clash of clans account, buy coc account, buy th11 coc account, buy coc th17 max base, buy coc account with trusted website, trusted coc account seller, legit clash of clans account, sell coc account safely, best site to buy coc account, clash of clans account marketplace, coc trading platform 2025, verified clash of clans seller, max th account for sale, clash of clans base shop, buy coc legend account, sell coc account without scam, buy coc account instant delivery, cheap coc account for sale, buy coc account paypal accepted, buy coc account with email access, clash of clans base marketplace, safe clash of clans trading, secure coc account deals, buy coc id legit, buy coc account Bangladesh, buy coc account worldwide, coc account trading Telegram, buy supercell id coc account, professional coc seller hub" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Gamelyra" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Gamelyra | Buy & Sell Clash of Clans Accounts Securely" />
+  <meta property="og:description" content="Trade safely on Gamelyra via our Telegram middleman service and get ready for our upcoming professional marketplace platform." />
+  <meta property="og:image" content="https://cdn.clashofclans.com/splash/ogimage.jpg" />
+  <meta property="og:url" content="https://gamelyra.com" />
+
+  <link rel="icon" href="https://cdn.clashofclans.com/badges/200/6JgQz7qYQ.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+
   <style>
     :root {
-      --bg-color: #0a0a0a;
-      --primary: #00ff88;
-      --text: #ffffff;
-      --radius: 16px;
-      --shadow: 0 0 12px rgba(0, 255, 136, 0.2);
+      --bg: #121212;
+      --text: #e0e0e0;
+      --text-muted: #9a9a9a;
+      --primary: #1877f2;
+      --primary-hover: #145dbf;
+      --font: 'Roboto', sans-serif;
+      --border-radius: 12px;
+      --shadow: rgba(24, 119, 242, 0.35);
     }
 
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
     }
 
     body {
-      background-color: var(--bg-color);
+      margin: 0;
+      background-color: var(--bg);
       color: var(--text);
-      font-family: 'Montserrat', sans-serif;
-      padding: 0;
-    }
-
-    .header {
-      position: relative;
-      width: 100%;
-      height: 180px;
-      overflow: hidden;
-    }
-
-    .cover {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .profile {
-      position: relative;
-      width: 100%;
-      max-width: 1000px;
-      margin: auto;
-      padding: 0 16px;
-      margin-top: -60px;
+      font-family: var(--font);
+      line-height: 1.6;
+      min-height: 100vh;
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    .profile-img {
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      border: 4px solid var(--primary);
-      object-fit: cover;
-      box-shadow: var(--shadow);
-      background: #000;
-    }
-
-    .profile-info {
-      margin-left: 16px;
-    }
-
-    .profile-info h1 {
-      font-size: 24px;
-      color: var(--primary);
-    }
-
-    .profile-info p {
-      font-size: 14px;
-      color: #bbb;
-      margin-top: 4px;
-    }
-
-    .bio {
-      max-width: 1000px;
-      margin: 20px auto;
-      padding: 16px;
+    header {
       text-align: center;
-      font-size: 16px;
-      color: #ccc;
+      padding: 80px 20px 50px;
+      max-width: 900px;
+      margin: 0 auto;
+      user-select: none;
     }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 10px;
-      padding: 10px;
-      max-width: 1000px;
-      margin: auto;
+    header h1 {
+      font-size: 3.8rem;
+      color: var(--primary);
+      margin-bottom: 0.4em;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-shadow: 0 0 12px var(--shadow);
     }
 
-    .gallery img {
-      width: 100%;
-      aspect-ratio: 1/1;
-      object-fit: cover;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      transition: 0.3s ease;
+    header p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto 2em;
+      line-height: 1.5;
+      color: var(--text-muted);
+      font-weight: 600;
     }
 
-    .gallery img:hover {
-      transform: scale(1.03);
+    a.cta-btn {
+      display: inline-block;
+      background-color: var(--primary);
+      color: #fff;
+      padding: 18px 48px;
+      border-radius: var(--border-radius);
+      font-weight: 700;
+      font-size: 1.25rem;
+      text-decoration: none;
+      box-shadow: 0 0 14px var(--shadow);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
     }
 
-    @media (max-width: 500px) {
-      .profile {
-        flex-direction: column;
-        align-items: center;
-        margin-top: -70px;
-        text-align: center;
-      }
+    a.cta-btn:hover,
+    a.cta-btn:focus {
+      background-color: var(--primary-hover);
+      box-shadow: 0 0 24px var(--primary-hover);
+      outline: none;
+    }
 
-      .profile-img {
-        width: 90px;
-        height: 90px;
-      }
+    section {
+      text-align: center;
+      padding: 50px 20px 50px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
 
-      .profile-info {
-        margin-left: 0;
-        margin-top: 8px;
-      }
+    h2 {
+      color: var(--primary);
+      font-size: 2.5rem;
+      margin-bottom: 28px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-shadow: 0 0 8px var(--shadow);
+    }
 
-      .profile-info h1 {
-        font-size: 18px;
-      }
+    .highlight-box {
+      background-color: #1e1e1e;
+      border-radius: var(--border-radius);
+      padding: 38px 32px;
+      max-width: 700px;
+      margin: 20px auto 0;
+      color: var(--text);
+      box-shadow: 0 0 18px var(--shadow);
+      user-select: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      line-height: 1.55;
+    }
 
-      .profile-info p {
-        font-size: 13px;
-      }
+    .highlight-box ul {
+      text-align: left;
+      list-style: none;
+      padding-left: 0;
+      margin-top: 25px;
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
 
-      .bio {
-        font-size: 14px;
-        padding: 12px;
+    .highlight-box ul li {
+      margin-bottom: 15px;
+      padding-left: 28px;
+      position: relative;
+    }
+
+    .highlight-box ul li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    footer {
+      background-color: #111111;
+      text-align: center;
+      padding: 28px 15px;
+      font-size: 1rem;
+      color: var(--text-muted);
+      border-top: 1px solid #333;
+      user-select: none;
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer a:hover,
+    footer a:focus {
+      text-decoration: underline;
+      outline: none;
+    }
+
+    ul.seo-keywords {
+      max-width: 700px;
+      margin: 0 auto 30px;
+      padding-left: 0;
+      list-style: none;
+      color: var(--text-muted);
+      text-align: left;
+      font-size: 1.1rem;
+      user-select: none;
+    }
+
+    ul.seo-keywords li {
+      display: inline-block;
+      background: #242424;
+      border-radius: 8px;
+      padding: 8px 15px;
+      margin: 5px 7px;
+      font-weight: 600;
+      color: var(--primary);
+      box-shadow: 0 0 8px var(--shadow);
+      transition: background-color 0.3s ease;
+      cursor: default;
+    }
+
+    ul.seo-keywords li:hover {
+      background-color: var(--primary);
+      color: #fff;
+      box-shadow: 0 0 18px var(--primary-hover);
+    }
+
+    @media (max-width: 650px) {
+      header h1 {
+        font-size: 3rem;
+      }
+      header p {
+        font-size: 1.15rem;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+      .highlight-box {
+        font-size: 1rem;
+      }
+      ul.seo-keywords li {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+        margin: 4px 5px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Cover -->
-  <div class="header">
-    <img src="IMG_20230504_014756.webp" class="cover" alt="Cover Photo">
-  </div>
+<header>
+  <h1>Gamelyra</h1>
+  <p>
+    We are launching the full-featured Clash of Clans account marketplace on this site very soon.<br /><br />
+    Until then, our official Telegram channel is fully active — where you can securely begin trading today.
+  </p>
+  <a class="cta-btn" href="https://t.me/gamelyra" target="_blank" rel="noopener noreferrer">Join Our Telegram Channel</a>
+</header>
 
-  <!-- Profile -->
-  <div class="profile">
-    <img src="IMG_3928.webp" class="profile-img" alt="Profile Picture">
-    <div class="profile-info">
-      <h1>Sheikh Mohammad Mizan</h1>
-      <p>Dreamer • Creator • Hacker Vibes</p>
-    </div>
+<section>
+  <h2>Safe Trading with Official Telegram Middleman</h2>
+  <div class="highlight-box">
+    <p><strong>Middleman Service:</strong> All trades are handled safely by our verified middleman <strong>@rohycherry</strong>.</p>
+    <ul>
+      <li>Secure crypto escrow payments</li>
+      <li>Fast, fair dispute resolution</li>
+      <li>Available 24/7 on Telegram</li>
+    </ul>
+    <a class="cta-btn" href="https://t.me/rohycherry" target="_blank" rel="noopener noreferrer">Contact @rohycherry</a>
   </div>
+</section>
 
-  <!-- Bio -->
-  <div class="bio">
-    Personal photo collection. A gallery that reflects vibes from hacker minimalism and premium iOS-style flow. Built by Mizan.
-  </div>
+<section>
+  <h2>Gamelyra Marketplace Coming Soon</h2>
+  <p>
+    Our professional platform will feature verified listings, instant delivery, seller ratings, and secure crypto checkout for global users.
+  </p>
+  <p>
+    Stay connected on Telegram to get early access and updates.
+  </p>
+</section>
 
-  <!-- Gallery -->
-  <div class="gallery">
-    <img src="IMG_3928.webp" alt="1">
-    <img src="1615755949154.webp" alt="2">
-    <img src="1615859935612.webp" alt="3">
-    <img src="IMG-20230403-WA0001.webp" alt="4">
-    <img src="IMG_20210305_124112.webp" alt="5">
-    <img src="IMG_20210518_210347.webp" alt="6">
-      <img src="IMG_20210524_021311.webp" alt="1">
-    <img src="IMG_20220123_124820.webp" alt="2">
-    <img src="IMG_20230504_014756.webp" alt="3">
-    <img src="IMG_20231113_081653_055.webp" alt="4">
-    <img src="IMG_3838.webp" alt="5">
-    <img src="IMG_3943.webp" alt="6">
-  </div>
+<section>
+  <h2>Our Targeted SEO Keywords</h2>
+  <p>We optimize for high-traffic search terms like:</p>
+  <ul class="seo-keywords">
+    <li>buy clash of clans account</li>
+    <li>trusted CoC account seller</li>
+    <li>buy coc account</li>
+    <li>buy th11 coc account</li>
+    <li>buy coc th17 max base</li>
+    <li>buy coc account with trusted website</li>
+    <li>sell coc account safely</li>
+    <li>best site to buy coc account</li>
+    <li>clash of clans account marketplace</li>
+    <li>coc trading platform 2025</li>
+    <li>verified clash of clans seller</li>
+    <li>max th account for sale</li>
+    <li>clash of clans base shop</li>
+    <li>buy coc legend account</li>
+    <li>sell coc account without scam</li>
+    <li>buy coc account instant delivery</li>
+    <li>cheap coc account for sale</li>
+    <li>buy coc account paypal accepted</li>
+    <li>buy coc account with email access</li>
+    <li>clash of clans base marketplace</li>
+    <li>safe clash of clans trading</li>
+    <li>secure coc account deals</li>
+    <li>buy coc id legit</li>
+    <li>buy coc account Bangladesh</li>
+    <li>buy coc account worldwide</li>
+    <li>coc account trading Telegram</li>
+    <li>buy supercell id coc account</li>
+    <li>professional coc seller hub</li>
+  </ul>
+</section>
+
+<footer>
+  <p>© 2025 Gamelyra. All rights reserved. | Developed by <a href="https://t.me/rohycherry" target="_blank" rel="noopener noreferrer">@rohycherry</a></p>
+</footer>
 
 </body>
 </html>
